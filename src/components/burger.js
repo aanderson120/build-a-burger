@@ -9,6 +9,33 @@ export default class Burger extends Component {
         meat: 0
     }
 
+    addRemoveIngredient = (action, ingredient) => {
+        let {
+            lettuce,
+            tomato,
+            cheese,
+            meat
+        } = this.state;
+
+        let stateValue;
+
+        switch(ingredient){
+            case 'lettuce': {
+                stateValue = lettuce;
+                break;
+            }
+            default: break;
+        }
+        if(action === 'add') {
+            stateValue = stateValue + 1;
+        }else {
+            stateValue = stateValue - 1;
+        }
+        this.setState({
+            [ingredient]: stateValue >= 0 ? stateValue : 0
+        });
+    }
+
     render() {
         return (
             <>
