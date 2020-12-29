@@ -61,6 +61,15 @@ export default class Burger extends Component {
         for (let i = 0; i <lettuce; i++) {
             burger.push(<div key= {burger.length} className="lettuceSide"></div>);
         }
+        for (let i = 0; i <tomato; i++) {
+            burger.push(<div key= {burger.length} className="tomatoSide"></div>);
+        }
+        for (let i = 0; i <cheese; i++) {
+            burger.push(<div key= {burger.length} className="cheeseSide"></div>);
+        }
+        for (let i = 0; i <meat; i++) {
+            burger.push(<div key= {burger.length} className="meatSide"></div>);
+        }
         return burger;
 
     
